@@ -1,0 +1,34 @@
+ng new crud-app
+ng new crud-app --no-standalone --routing --ssr=false
+
+ng add @angular/material
+
+npm i -g json-server
+
+create sample data in db.json file for reference:
+{
+   "employees": [
+     {
+       "id": 1,
+       "firstName": "Brinn",
+       "lastName": "Jephcote",
+       "email": "bjephcote0@archive.org",
+       "dob": "1981-10-05T12:09:39Z",
+       "gender": "Female",
+       "education": "Graduate",
+       "company": "Gabspot",
+       "experience": 36,
+       "package": 37
+     }
+   ]
+}
+
+
+add following code in package.json in Scripts:
+---------------------------------------------
+"json:server":"json-server --watch  db.json"
+
+
+npm run json:server
+
+https://medium.com/c-says-creativecoder/how-to-setup-rest-api-json-server-in-angular-5cde358f8739
